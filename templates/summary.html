@@ -2,14 +2,19 @@
 <html>
 <head>
     <title>Summary Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='summary.css') }}">
 </head>
 <body>
-    <h1>Summary Report</h1>
-    <ul>
-        <li>Total Learners: {{ learners }}</li>
-        <li>Total Assessors: {{ assessors }}</li>
-        <li>Total Institutions: {{ institutions }}</li>
-    </ul>
-    <a href="/">Back to Home</a>
+    <div class="summary-container">
+        <h1>Summary Report</h1>
+        <ul>
+            <li>Total Learners: <span>{{ learners }}</span></li>
+            <li>Total Assessors: <span>{{ assessors }}</span></li>
+            <li>Total Institutions: <span>{{ institutions }}</span></li>
+        </ul>
+        <div class="back-link">
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>

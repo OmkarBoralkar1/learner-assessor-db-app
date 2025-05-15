@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head><title>Astrico Admin Portal</title></head>
+<head>
+    <title>Astrico Admin Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
 <body>
-    <h1>Welcome to Astrico AI Portal</h1>
-    <ul>
-        <li><a href="/learners/add">Add Learner</a></li>
-        <li><a href="/assessors/add">Add Assessor</a></li>
-        <li><a href="/institutions/add">Add Institution</a></li>
-        <li><a href="/summary/">View Summary</a></li>
-    </ul>
+    <div class="container">
+        <h1>Welcome to Astrico AI Portal</h1>
+        <ul class="nav-links">
+            <li><a href="/learners/add">Add Learner</a></li>
+            <li><a href="/assessors/add">Add Assessor</a></li>
+            <li><a href="/institutions/add">Add Institution</a></li>
+            <li><a href="/summary/">View Summary</a></li>
+        </ul>
+    </div>
 </body>
 </html>

@@ -2,30 +2,35 @@
 <html>
 <head>
     <title>Add Assessor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='add_assessor.css') }}">
 </head>
 <body>
-    <h1>Add Assessor</h1>
-    <form method="POST">
-        <label>Full Name:</label><br>
-        <input type="text" name="full_name" required><br>
+    <div class="form-container">
+        <h1>Add Assessor</h1>
+        <form method="POST" action="/assessors/add">
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label>Mobile:</label><br>
-        <input type="text" name="mobile" required><br>
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" required>
 
-        <label>Institution Name:</label><br>
-        <input type="text" name="institution_name" required><br>
+            <label for="institution_name">Institution Name:</label>
+            <input type="text" id="institution_name" name="institution_name" required>
 
-        <label>Role:</label><br>
-        <select name="role" required>
-            <option value="Internal">Internal</option>
-            <option value="External">External</option>
-        </select><br><br>
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="Internal">Internal</option>
+                <option value="External">External</option>
+            </select>
 
-        <button type="submit">Add Assessor</button>
-    </form>
-    <br><a href="/">Back to Home</a>
+            <button type="submit">Add Assessor</button>
+        </form>
+        <div class="back-link">
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>
