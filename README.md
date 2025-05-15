@@ -1,2 +1,2 @@
 ﻿# learner-assessor-db-app
-![image](https://github.com/user-attachments/assets/37d39c5f-6564-4da6-ba1d-48437d8360ee)
+
