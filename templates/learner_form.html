@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Learner</title>
+</head>
+<body>
+    <h1>Add Learner</h1>
+    <form method="POST" action="/learners/add">
+
+        <label>Full Name:</label><br>
+        <input type="text" name="full_name" required><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br>
+
+        <label>Mobile:</label><br>
+        <input type="text" name="mobile" required><br>
+
+        <label>Institution Name:</label><br>
+        <input type="text" name="institution_name" required><br>
+
+        <label>Course (optional):</label><br>
+        <input type="text" name="course"><br>
+
+        <label>Batch (optional):</label><br>
+        <input type="text" name="batch"><br><br>
+
+        <button type="submit">Add Learner</button>
+    </form>
+    <br><a href="/">Back to Home</a>
+</body>
+</html>
