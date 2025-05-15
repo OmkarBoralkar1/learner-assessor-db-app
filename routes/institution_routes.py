@@ -39,4 +39,5 @@ def add_institution():
             return redirect('/')
         else:
             print("⚠️ Institution already exists. Skipping insert.")
+   
     return render_template('institution_form.html')

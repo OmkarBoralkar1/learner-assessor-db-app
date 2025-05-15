@@ -26,4 +26,5 @@ def add_assessor():
             return redirect('/')
         else:
             print("⚠️ assessor was not able to add successfully .")
-    return render_template('assessor_form.html')
+    institutions = Institution.query.all()
+    return render_template('assessor_form.html',institutions=institutions)

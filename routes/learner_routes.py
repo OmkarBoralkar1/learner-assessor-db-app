@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, flash
+from flask import Blueprint, render_template, request, redirect
 from models.learner import Learner
 from models.institution import Institution
 from models.db import db
@@ -10,10 +10,7 @@ def add_learner():
     if request.method == 'POST':
         data = request.form
 
-        # Print all form data as ImmutableMultiDict
         print("Received form data:", data)
-
-        # If you want to print individual fields:
         print("Full Name:", data.get('full_name'))
         print("Email:", data.get('email'))
         print("Mobile:", data.get('mobile'))
@@ -33,6 +30,11 @@ def add_learner():
             )
             db.session.add(learner)
             db.session.commit()
-            flash('Learner added successfully!', 'success')
+
+            # ✅ Just print success in terminal (no session usage)
+            print("✅ Learner added successfully!")
+
             return redirect('/')
-    return render_template('learner_form.html')
+
+    institutions = Institution.query.all()
+    return render_template('learner_form.html', institutions=institutions)

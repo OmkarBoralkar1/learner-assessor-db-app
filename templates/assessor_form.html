@@ -18,7 +18,12 @@
             <input type="text" id="mobile" name="mobile" required>
 
             <label for="institution_name">Institution Name:</label>
-            <input type="text" id="institution_name" name="institution_name" required>
+            <select id="institution_name" name="institution_name" required>
+                <option value="">-- Select Institution --</option>
+                {% for institution in institutions %}
+                    <option value="{{ institution.name }}">{{ institution.name }}</option>
+                {% endfor %}
+            </select>
 
             <label for="role">Role:</label>
             <select id="role" name="role" required>
